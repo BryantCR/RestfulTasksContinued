@@ -1,0 +1,18 @@
+/*Main*/
+.mainHoldTasks{
+    display: flex;
+    flex-direction: row;
+}
+/* Task box */
+.holdTask{
+    border: 2px solid black;
+    border-radius: 5px;
+    margin: 2%;
+    padding: 2%;
+    justify-content: center;
+    text-align: center;
+    width: 10%;
+}
+.showInfo{
+    background-color: darkslategrey;
+}

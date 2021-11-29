@@ -1,1 +1,28 @@
-<p>This is the task api!</p>
+<p>
+    This is the task api!
+</p>
+<button (click) = "getTasks()">
+    Click to load the tasks
+</button>
+<main class="mainHoldTasks">
+    <div class="holdTask" *ngFor = "let task of allTasks">
+        <div class="title">
+            {{task.title}}
+        </div>
+        <div class="title">
+            Description: {{task.description}}
+        </div>
+        <div class="title">
+            Status: {{task.completed}}
+        </div>
+        <button class="showInfo">
+            Show more
+        </button>
+        <!--<div class="title">
+            Date: {{task.created_at}}
+        </div>
+        <div class="title">
+            Updated: {{task.updated_at}}
+        </div>-->
+    </div>
+</main>

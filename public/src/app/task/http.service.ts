@@ -9,24 +9,23 @@ export class HttpService {
 
   constructor(private _http: HttpClient) { 
     this.fetchTasks();
-    this.fetchTasksByName("Ronaldo");
+    //this.fetchTasksByName("Ronaldo");
   }
 
   fetchTasks(): void{
     this._http.get( "http://localhost:8080/tasks/" )
       .subscribe( (data:any) => {
-        this.task = data;
+        this.task = data.task;
         console.log( "All TASKS: ", this.task );
       });
   }
 
-  fetchTasksByName(title : String): void{
+  /*fetchTasksByName(title : String): void{
     this._http.get( "http://localhost:8080/tasks/"+ title )
       .subscribe( (data:any) => {
         this.task = data;
         console.log("Find by Name", this.task );
       });
-  }
-
+  }*/
 
 }
